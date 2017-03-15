@@ -19,19 +19,23 @@ code {
 }
 
 .highlight pre {
-  color: #e0e0e0;
+  color: #fdf6e3;
   background-color: transparent;
 }
 
 .highlight .const {
-  color: #f1c40f;
+  color: #859900;
 }
 .highlight .string {
-  color: #2ecc71;
+  color: #fdf6e3;
 }
 .highlight .var {
-  color: #e74c3c;
+  color: #6c71c4;
 }
 .highlight .number, .highlight .array {
-  color: #9b59b6;
+  color: #d33682;
+}
+
+a {
+  color: #6c71c4;
 }
