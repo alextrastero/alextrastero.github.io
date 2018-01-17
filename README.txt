@@ -1,1 +1,1 @@
-A little bit of info about myself; <a href='alextrastero.github.io'>alextrastero.github.io</a>
+A little bit of info about myself; http://alextrastero.github.io/
