@@ -7,9 +7,9 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     color: #283c86;
-  `;
+  `
 
-  const log = (text) => console.log(`%c ${text[0]} `, style);
+  const log = (text) => console.log(`%c ${text[0]} `, style)
 
   log`Alexander Garth Odell`
   log`Frontend Developer based in Berlin`
