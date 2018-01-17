@@ -20,14 +20,20 @@
 			alextrastero.github.io git:(master) >_ open the console
 		</section>
     <script>
-			var brandStyle = 'color: rebeccapurple; width: 100%; background: #eee;';
+			var brandStyle = 'color: rebeccapurple';
+			var invertedBrandStyle = 'background: rebeccapurple; color: #fff';
       function pl(val, style) {
         console.log(`%c ${val} `, style || '');
       }
-      pl('+-+-+-+-+-+-+-+-+-+-+-+-+', brandStyle);
-      pl('| Alexander Garth Odell |', brandStyle);
-      pl('|  Frontend Developer   |', brandStyle);
-      pl('+-+-+-+-+-+-+-+-+-+-+-+-+', brandStyle);
+      //pl('+-+-+-+-+-+-+-+-+-+-+-+-+', brandStyle);
+      //pl('| Alexander Garth Odell |', brandStyle);
+      //pl('|  Frontend Developer   |', brandStyle);
+      //pl('+-+-+-+-+-+-+-+-+-+-+-+-+', brandStyle);
+
+      pl('+-+-+-+-+-+-+-+-+-+-+', invertedBrandStyle);
+pl('> Alexander Garth Odell', brandStyle);
+pl('> Frontend Developer', brandStyle);
+      pl('+-+-+-+-+-+-+-+-+-+-+', invertedBrandStyle);
 
       //printLn('Hey', 'background: #222; color: #bada55');
       //printLn('Sup')
