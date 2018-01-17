@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" class="csscv">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0">
+    <title>Curriculum Alexander Garth ODELL</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body class='highlight'>
+    <div class="terminal" style='display:none'>
+      <div class="terminal__row">
+        <a href="#solarized" class="terminal__link">a:colorscheme solarized</a>
+      </div>
+      <div class="terminal__row">
+        <a href="#twilight" class="terminal__link">a:colorscheme twilight</a>
+      </div>
+    </div>
+    <pre>
+      <code class="language-javascript" data-lang="javascript">
+/*
+ *
+ * Alexander Garth Odell's CV
+ * Hola, i'm Alex, half English, half American born and raised in the south of Spain. 
+ * Passionate web developer that is always trying to improve his tools and rules. 
+ * I always put myself in the users shoes and have great attention to detail.
+ * I love to discover new frameworks, template languages and lil cool snippets.
+ * My biggest passions are Javascript and CSS.
+ * If you feel your team needs a bit more muchness and you think I could fit in send me an email <a href="mailto:alextrastero@gmail.com">here</a>.</span>
+ *
+ */
+
+<span class='const'>const</span> <span class='var'>aboutMe</span> <span class='eq'>=</span> <span class='brack'>{</span>
+  <span class='var'>name</span><span class='colon'>:</span> <span class='string'>'Alexander Garth Odell'</span>,
+  <span class='var'>born</span><span class='colon'>:</span> <span class='number'>1984</span>,
+  <span class='var'>nationality</span><span class='colon'>:</span> <span class='string'>'British'</span>
+<span class='brackclose'>}</span>;
+
+<span class='const'>const</span> <span class='var'>currentPosition</span> <span class='eq'>=</span> <span class='brack'>{</span>
+  <span class='var'>company</span><span class='colon'>:</span> <span class='string'>'Babbel GmbH, Berlin'</span>,
+  <span class='var'>url</span><span class='colon'>:</span> <span class='string'>'http://www.babbel.com/'</span>,
+  <span class='var'>role</span><span class='colon'>:</span> <span class='string'>'Frontend Engineer'</span>,
+  <span class='var'>tags</span><span class='colon'>:</span> <span class='array'>[</span><span class='string'>'js'</span>, <span class='string'>'react/redux'</span>, <span class='string'>'es6'</span><span class='array'>]</span>
+<span class='brackclose'>}</span>;
+
+<span class='const'>const</span> <span class='var'>previouslyAt</span> <span class='eq'>=</span> <span class='brack'>[</span>
+  <span class='string'>'Wimdu GmbH, Berlin'</span>,
+  <span class='string'>'GameDuell GmbH, Berlin'</span>,
+  <span class='string'>'BetVictor, Gibraltar'</span>
+<span class='brackclose'>]</span>;
+
+<span class='const'>const</span> <span class='var'>profiles</span> <span class='eq'>=</span> <span class='brack'>{</span>
+  <span class='var'>github</span><span class='colon'>:</span> <span class="string">'</span><a href='https://github.com/alextrastero' class='string'>alextrastero</a><span class="string">'</span>,
+  <span class='var'>twitter</span><span class='colon'>:</span> <span class="string">'</span><a href='https://twitter.com/alextrastero' class='string'>alextrastero</a><span class="string">'</span>
+<span class='brackclose'>}</span>;
+
+<span class='const'>const</span> <span class='var'>openSource</span> <span class='eq'>=</span>  <span class='brack'>{</span>
+  <span class='var'>name</span><span class='colon'>:</span> <span class='string'>'React-Materialize'</span>,
+  <span class='var'>url</span><span class='colon'>:</span> <span class='string'>'react-materialize.github.io'</span>
+<span class='brackclose'>}</span>;
+
+      </code>
+    </pre>
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-79208669-1', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+
+    <script>
+      var links = document.querySelectorAll('.terminal__link');
+      for (var i = 0; i < links.length; i++) {
+        links[i].addEventListener('click', toggleClass);
+      }
+      function toggleClass(evt) {
+        evt.preventDefault();
+        var classname = evt.target.getAttribute('href').substring(1);
+        var htmlDOM = document.getElementsByTagName('html')[0];
+        if (classname === 'twilight') {
+          htmlDOM.classList.add('twilight-theme');
+        }else {
+          htmlDOM.classList.remove('twilight-theme');
+        }
+      }
+    </script>
+</body>
+</html>
