@@ -3,43 +3,43 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Hello Bulma!</title>
+    <title>Alexander Garth Odell - Frontend Developer</title>
     <style>
-      body {
-        color: #eee;
-        background: #151515;
-        font-family: monospace;
-      }
-      section {
-        margin-top: 10%;
-        text-align: center;
-        font-size: larger;
-      }
+      body {color: #eee; background: #151515; font-family: monospace; }
+      section {margin-top: 10%; text-align: center; font-size: larger; }
     </style>
   </head>
   <body>
-    <section>
-      >_ open the console
-    </section>
+    <section>>_ open the console</section>
     <script>
-      var brandStyle = 'color: rebeccapurple';
-      var invertedBrandStyle = 'background: rebeccapurple; color: #fff';
-      function pl(val, style) {
-        console.log(`%c ${val} `, style || '');
-      }
-      //pl('+-+-+-+-+-+-+-+-+-+-+-+-+', brandStyle);
-      //pl('| Alexander Garth Odell |', brandStyle);
-      //pl('|  Frontend Developer   |', brandStyle);
-      //pl('+-+-+-+-+-+-+-+-+-+-+-+-+', brandStyle);
+      var style = `
+        font-family: 'Georgia';
+        font-weight: 600;
+        font-size: 1.5em;
+        background: -webkit-linear-gradient(33deg, #283c86, #45a247);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        color: #283c86;
+      `;
 
-      pl('+-+-+-+-+-+-+-+-+-+-+', invertedBrandStyle);
-      pl('> Alexander Garth Odell', brandStyle);
-      pl('> Frontend Developer', brandStyle);
-      pl('+-+-+-+-+-+-+-+-+-+-+', invertedBrandStyle);
+      const log = (text) => console.log(`%c ${text[0]} `, style);
 
-      //printLn('Hey', 'background: #222; color: #bada55');
-      //printLn('Sup')
-      // more docs here: https://developers.google.com/web/tools/chrome-devtools/console/console-write#styling_console_output_with_css
+      log`Alexander Garth Odell`
+      log`Frontend Developer based in Berlin`
+      log`Current: babbel`
+      log`Previous: wimdu | gameduell | betvictor`
+      log`+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+`
+      log`github.com/alextrastero`
+      log`linkedin.com/in/alexandergarthodell`
+
+      
+      //  ███████╗ ██████╗ ██╗   ██╗███╗   ██╗██████╗     ██╗████████╗██████╗ 
+      //  ██╔════╝██╔═══██╗██║   ██║████╗  ██║██╔══██╗    ██║╚══██╔══╝╚════██╗
+      //  █████╗  ██║   ██║██║   ██║██╔██╗ ██║██║  ██║    ██║   ██║     ▄███╔╝
+      //  ██╔══╝  ██║   ██║██║   ██║██║╚██╗██║██║  ██║    ██║   ██║     ▀▀══╝ 
+      //  ██║     ╚██████╔╝╚██████╔╝██║ ╚████║██████╔╝    ██║   ██║     ██╗   
+      //  ╚═╝      ╚═════╝  ╚═════╝ ╚═╝  ╚═══╝╚═════╝     ╚═╝   ╚═╝     ╚═╝   
+      // contact: alextrastero at gmail dot com
     </script>
   </body>
 </html>
