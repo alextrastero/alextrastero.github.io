@@ -1,21 +1,6 @@
-(() => {
-  var style = `
-    font-family: 'Georgia';
-    font-weight: 600;
-    font-size: 1.5em;
-    background: -webkit-linear-gradient(33deg, #283c86, #45a247);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    color: #283c86;
-  `
-
-  const log = (text) => console.log(`%c ${text[0]} `, style)
-
-  log`Alexander Garth Odell`
-  log`Frontend Developer based in Berlin`
-  log`Current: babbel`
-  log`Previous: wimdu | gameduell | betvictor`
-  log`+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+`
-  log`github.com/alextrastero`
-  log`linkedin.com/in/alexandergarthodell`
-})()
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-79208669-1', 'auto');
+ga('send', 'pageview');
