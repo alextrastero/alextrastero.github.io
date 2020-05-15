@@ -16,6 +16,8 @@ jobs:
       - run: npm run build
       - name: Add & Commit
         uses: EndBug/add-and-commit@v4.1.0
+        with:
+          message: Deploy commit @ ${{ github.sha }} 🚀
         env:
           # This is necessary in order to push a commit to the repo
           GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
