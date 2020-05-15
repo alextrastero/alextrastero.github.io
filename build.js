@@ -13,7 +13,7 @@ handlebars.registerPartial(
 
 Metalsmith(__dirname)
   .source('src')
-  .destination('public')
+  .destination('docs')
   .clean(true)
   .use(collections({
     articles: 'articles/*.md',
