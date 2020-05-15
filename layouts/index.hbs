@@ -6,10 +6,7 @@
   <body>
     {{>navigation }}
     <div>
-    {{#each articles }}
-    <a href="{{path}}" title="{{description}}"><h3>{{ title }}</h3></a>
-      <p>{{ description }}</p>
-    {{/each }}
+      {{{contents}}}
     </div>
   </body>
 </html>

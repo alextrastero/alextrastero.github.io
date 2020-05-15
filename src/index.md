@@ -2,4 +2,4 @@
 layout: index.hbs
 ---
 
-indexoooo
+HOME
