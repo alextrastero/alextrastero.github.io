@@ -21,6 +21,7 @@ Metalsmith(__dirname)
   .use(markdown())
   .use(permalinks({
     relative: false,
+    // pattern: ':collection/:title',
   }))
   .use(layouts({
     engine: 'handlebars',
