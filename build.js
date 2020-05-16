@@ -18,7 +18,11 @@ Metalsmith(__dirname)
   .destination('./')
   .use(browserSync({
     server: './',
-    files: ['src/**/*.md', 'layouts/**/*.hbs', 'src/scss/**/*.scss']
+    files: [
+      'src/**/*.md',
+      'layouts/**/*.hbs',
+      'src/scss/**/*.scss',
+    ]
   }))
   .clean(false)
   .use(sass({
