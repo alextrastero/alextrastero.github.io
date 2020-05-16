@@ -4,6 +4,8 @@ const layouts = require('metalsmith-layouts');
 const collections = require('metalsmith-collections');
 const permalinks = require('metalsmith-permalinks');
 const sass = require('metalsmith-sass');
+const watch = require('metalsmith-watch');
+const serve = require('metalsmith-serve');
 const handlebars = require('handlebars');
 const fs = require('fs');
 
@@ -15,6 +17,15 @@ handlebars.registerPartial(
 Metalsmith(__dirname)
   .source('src')
   .destination('./')
+  .use(serve())
+  .use(
+    watch({
+      paths: {
+        "${source}/**/*": true,
+      },
+      livereload: true,
+    })
+  )
   .clean(false)
   .use(sass({
     outputDir: 'css/',

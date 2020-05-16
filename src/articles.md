@@ -2,4 +2,4 @@
 layout: articles.hbs
 ---
 
-Blog
+list of articles ok?

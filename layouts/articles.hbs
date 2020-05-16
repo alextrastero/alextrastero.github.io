@@ -6,10 +6,14 @@
   <body>
     {{>navigation }}
     <div>
+    {{{contents}}}
     {{#each articles }}
-    <a href="{{path}}" title="{{description}}"><h3>{{ title }}</h3></a>
+      <a href="/{{path}}" title="{{description}}">
+        <h3>{{ title }}</h3>
+      </a>
       <p>{{ description }}</p>
     {{/each }}
     </div>
+    <script src="http://localhost:35729/livereload.js"></script>
   </body>
 </html>

@@ -2,4 +2,6 @@
 layout: index.hbs
 ---
 
-HOME
+## where
+
+in the jungle
