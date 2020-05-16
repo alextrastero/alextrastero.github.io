@@ -3,6 +3,7 @@ const markdown = require('metalsmith-markdown');
 const layouts = require('metalsmith-layouts');
 const collections = require('metalsmith-collections');
 const permalinks = require('metalsmith-permalinks');
+const sass = require('metalsmith-sass');
 const handlebars = require('handlebars');
 const fs = require('fs');
 
@@ -15,6 +16,10 @@ Metalsmith(__dirname)
   .source('src')
   .destination('./')
   .clean(false)
+  .use(sass({
+    outputDir: 'css/',
+    outputStyle: 'expanded',
+  }))
   .use(collections({
     articles: 'articles/*.md',
   }))
