@@ -1,8 +1,7 @@
 ---
 title: 'Post1'
-layout: article.hbs
-description: 'post ?'
+description: 'im the description'
 ---
 ## Post content here...
 
-yes
+post number one content

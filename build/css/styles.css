@@ -4,19 +4,16 @@ body {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e51;
-  margin-top: 60px;
-}
+  margin-top: 60px; }
 
 .navigation {
   display: flex;
   justify-content: center;
-  margin: 2rem 1rem;
-}
+  margin: 2rem 1rem; }
 
 .button {
   margin: 1rem;
   border: solid 1px #ccc;
   border-radius: 4px;
   padding: 0.5rem 1rem;
-  text-decoration: none;
-}
+  text-decoration: none; }
