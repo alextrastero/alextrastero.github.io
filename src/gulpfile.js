@@ -3,7 +3,6 @@ const compileHandlebars = require('gulp-compile-handlebars');
 const path = require('path');
 const markdown = require('gulp-markdown');
 const frontMatter = require('gulp-front-matter');
-const del = require('del');
 const browserSync = require('browser-sync');
 const rename = require('gulp-rename');
 const layout = require('gulp-layout');
@@ -14,9 +13,9 @@ const data = require('gulp-data');
 sass.compiler = require('node-sass');
 
 const styles = () => {
-  return src('src/scss/**/*.scss')
+  return src('./scss/**/*.scss')
     .pipe(sass().on('error', sass.logError))
-    .pipe(dest('./build/css'));
+    .pipe(dest('../css'));
 }
 
 const parseLayout = file => {
@@ -44,7 +43,7 @@ const parseRename = path => {
 
 const articlesData = [];
 const collection = () => {
-  return src('src/**/*.md')
+  return src('./**/*.md')
     .pipe(frontMatter())
     .pipe(data(file => {
       // only if file has title
@@ -58,7 +57,7 @@ const collection = () => {
 };
 
 const templates = () => {
-  return src('src/**/*.md')
+  return src('./**/*.md')
     .pipe(plumber())
     .pipe(frontMatter())
     .pipe(markdown())
@@ -67,20 +66,16 @@ const templates = () => {
       batch: './layouts/partials/',
     }))
     .pipe(rename(parseRename))
-    .pipe(dest('./build'))
-};
-
-const clean = () => {
-  return del('./build');
+    .pipe(dest('../'))
 };
 
 const serve = () => {
   browserSync({
-    server: './build',
+    server: '../',
     open: false,
   });
 };
 
 const run = series(styles, collection, templates);
-exports.build = series(clean, run);
+exports.build = run;
 exports.default = series(run, serve);

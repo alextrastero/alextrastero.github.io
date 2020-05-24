@@ -5,8 +5,8 @@
   "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "gulp",
-    "build": "gulp build"
+    "start": "gulp --gulpfile src/gulpfile.js",
+    "build": "gulp --gulpfile src/gulpfile.js build"
   },
   "repository": {
     "type": "git",
@@ -22,7 +22,6 @@
   "dependencies": {},
   "devDependencies": {
     "browser-sync": "^2.26.7",
-    "del": "^5.1.0",
     "gulp": "^4.0.2",
     "gulp-compile-handlebars": "^0.6.1",
     "gulp-data": "^1.3.1",
