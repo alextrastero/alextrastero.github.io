@@ -1,4 +1,4 @@
-const { series, src, dest } = require('gulp');
+const { series, src, dest, watch } = require('gulp');
 const compileHandlebars = require('gulp-compile-handlebars');
 const path = require('path');
 const markdown = require('gulp-markdown');
@@ -10,12 +10,14 @@ const plumber = require('gulp-plumber');
 const sass = require('gulp-sass');
 const data = require('gulp-data');
 
+const reload = browserSync.reload;
 sass.compiler = require('node-sass');
 
 const styles = () => {
   return src('./scss/**/*.scss')
     .pipe(sass().on('error', sass.logError))
-    .pipe(dest('../css'));
+    .pipe(dest('../css'))
+    .pipe(reload({ stream: true }));
 }
 
 const parseLayout = file => {
@@ -74,6 +76,9 @@ const serve = () => {
     server: '../',
     open: false,
   });
+
+  watch('./scss/**/*.scss', series(styles));
+  // watch(['../*.html', '../css/**/*.css', 'scripts/**/*.js'], {cwd: '../'}, reload);
 };
 
 const run = series(styles, collection, templates);
