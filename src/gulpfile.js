@@ -69,6 +69,7 @@ const templates = () => {
     }))
     .pipe(rename(parseRename))
     .pipe(dest('../'))
+    .pipe(reload({ stream: true }));
 };
 
 const serve = () => {
@@ -78,7 +79,7 @@ const serve = () => {
   });
 
   watch('./scss/**/*.scss', series(styles));
-  // watch(['../*.html', '../css/**/*.css', 'scripts/**/*.js'], {cwd: '../'}, reload);
+  watch('./**/*.md', series(collection, templates));
 };
 
 const run = series(styles, collection, templates);
