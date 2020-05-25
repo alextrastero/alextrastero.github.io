@@ -80,6 +80,7 @@ const serve = () => {
 
   watch('./scss/**/*.scss', series(styles));
   watch('./**/*.md', series(collection, templates));
+  watch('./**/*.hbs', series(collection, templates));
 };
 
 const run = series(styles, collection, templates);
