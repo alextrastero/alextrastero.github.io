@@ -43,8 +43,9 @@ const parseRename = path => {
   return path;
 };
 
-const articlesData = [];
+let articlesData = [];
 const collection = () => {
+  articlesData = [];
   return src('./**/*.md')
     .pipe(frontMatter())
     .pipe(data(file => {
