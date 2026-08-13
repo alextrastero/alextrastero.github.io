@@ -1,89 +1,371 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="style.css">
-    <title>Alexander Garth Odell - Frontend Developer</title>
-  </head>
-  <body>
-    <section class="section">
-      <div class="container">
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Alexander Odell — Senior Software Engineer</title>
+<meta name="description" content="Senior software engineer, frontend. Málaga, Spain.">
+<style>
+  :root {
+    --ink: #1a1d21;
+    --ink-soft: #4a5058;
+    --ink-faint: #767d86;
+    --rule: #dfe2e6;
+    --bg: #ffffff;
+    --accent: #2f4858;
+    --link: #2b5f7e;
+    --measure: 46rem;
+  }
 
-        <div class="columns is-centered">
-          <div class="column is-two-thirds">
-            <div class="me">
-              <img src="/me.jpg" alt="no animals were harmed in the making of this photo">
-            </div>
-          </div>
-        </div>
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --ink: #e6e8ea;
+      --ink-soft: #b3b9c0;
+      --ink-faint: #878e96;
+      --rule: #33383e;
+      --bg: #16181b;
+      --accent: #a9c4d4;
+      --link: #8fb8cf;
+    }
+  }
 
-        <div class="columns is-centered">
-          <div class="column is-two-thirds">
-            <div class="hallo">
-              <h1 class="title">
-                Hallo!
-              </h1>
-              <p class="subtitle">
-                I'm Alex, a <strong>frontend developer</strong>, life turist, hipster musician wannabe, currently residing in Málaga (Spain).
-              </p>
-            </div>
-            <div class="columns is-vcentered">
-              <div class="column">
-                <small>work</small>
-                <p class="subtitle">
-                  <a target="_blank" href="https://picstars.com">Picstars</a> (Remote)
-                </p>
-                <small>previously</small>
-                <p class="subtitle">
-                  <a target="_blank" href="https://www.babbel.com/">Babbel</a> (Berlin/Remote)
-                </p>
-                <p class="subtitle">
-                  <a target="_blank" href="https://www.wimdu.com/">Wimdu</a> (Berlin)
-                </p>
-                <p class="subtitle">
-                  <a target="_blank" href="https://www.betvictor.com/">Betvictor</a> (Gibraltar)
-                </p>
-              </div>
-              <div class="column">
-                <small>location</small>
-                <p class="subtitle">
-                  Málaga (Spain)
-                </p>
-                <small>projects</small>
-                <p class="subtitle">
-                  <a target="_blank" href="https://github.com/react-materialize/react-materialize">react-materialize</a>
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
+  * { box-sizing: border-box; }
 
-        <div class="columns is-centered links">
-          <div class="column is-two-thirds">
-            <p class="subtitle">
-              <a target="_blank" href="https://github.com/alextrastero">github</a>
-              /
-              <a target="_blank" href="https://twitter.com/alextrastero">twitter</a>
-              /
-              <a target="_blank" href="https://www.linkedin.com/in/alexandergarthodell/">linkedin</a>
-            </p>
-          </div>
-        </div>
+  html { -webkit-text-size-adjust: 100%; }
+
+  body {
+    margin: 0;
+    padding: 3.5rem 1.5rem 5rem;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "Charter", "Bitstream Charter", "Sitka Text", Cambria, Georgia, serif;
+    font-size: 17px;
+    line-height: 1.55;
+  }
+
+  main { max-width: var(--measure); margin: 0 auto; }
+
+  a { color: var(--link); text-decoration: none; border-bottom: 1px solid currentColor; }
+  a:hover { border-bottom-width: 2px; }
+
+  /* ---- header ---- */
+
+  header { margin-bottom: 2.5rem; }
+
+  h1 {
+    font-size: 1.85rem;
+    line-height: 1.15;
+    margin: 0 0 .2rem;
+    letter-spacing: -0.01em;
+    font-weight: 600;
+  }
+
+  .subtitle {
+    margin: 0 0 .9rem;
+    font-size: 1.05rem;
+    color: var(--ink-soft);
+  }
+
+  .contact {
+    margin: 0;
+    font-size: .88rem;
+    color: var(--ink-soft);
+    line-height: 1.9;
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  }
+  .contact .sep { color: var(--ink-faint); padding: 0 .45rem; }
+
+  /* ---- sections ---- */
+
+  section { margin-bottom: 2.25rem; }
+
+  h2 {
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    font-size: .78rem;
+    font-weight: 600;
+    letter-spacing: .09em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 0 0 1rem;
+    padding-bottom: .4rem;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  p { margin: 0 0 .85rem; }
+  p:last-child { margin-bottom: 0; }
+
+  /* ---- roles ---- */
+
+  .role { margin-bottom: 1.6rem; }
+  .role:last-child { margin-bottom: 0; }
+
+  .role-head {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 0 1rem;
+    margin-bottom: .15rem;
+  }
+
+  .role-title { font-size: 1.05rem; font-weight: 600; margin: 0; }
+  .role-title .at { font-weight: 400; color: var(--ink-soft); }
+
+  .dates {
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    font-size: .82rem;
+    color: var(--ink-faint);
+    white-space: nowrap;
+  }
+
+  .blurb { color: var(--ink-soft); font-size: .95rem; margin-bottom: .55rem; }
+
+  ul { margin: 0; padding-left: 1.15rem; }
+  li { margin-bottom: .4rem; }
+  li:last-child { margin-bottom: 0; }
+
+  .skills { font-size: .96rem; margin: 0; }
+
+  /* ---- print ---- */
+
+  @page { size: A4; margin: 14mm 16mm; }
+
+  @media print {
+    :root {
+      --ink: #000;
+      --ink-soft: #2b2b2b;
+      --ink-faint: #555;
+      --rule: #bbb;
+      --bg: #fff;
+      --accent: #000;
+      --link: #000;
+    }
+
+    body {
+      padding: 0;
+      font-size: 10.2pt;
+      line-height: 1.42;
+      background: #fff;
+      color: #000;
+    }
+
+    main { max-width: none; }
+
+    a { color: #000; border-bottom: none; }
+
+    header { margin-bottom: 1.4rem; }
+    h1 { font-size: 17pt; }
+    .subtitle { font-size: 11pt; margin-bottom: .5rem; }
+    .contact { font-size: 8.6pt; line-height: 1.5; }
+
+    section { margin-bottom: 1.1rem; }
+    h2 { font-size: 8.4pt; margin-bottom: .5rem; padding-bottom: .2rem; }
+
+    .role { margin-bottom: .85rem; }
+    .role-title { font-size: 10.6pt; }
+    .dates { font-size: 8.6pt; }
+    .blurb { font-size: 9.6pt; margin-bottom: .3rem; }
+    li { margin-bottom: .15rem; }
+    p { margin-bottom: .45rem; }
+
+    /* Experience is taller than a page, so sections MUST be allowed to split.
+       Putting break-inside: avoid on `section` pushes the whole block to the
+       next page and leaves the first one half empty. Only keep whole the
+       things that actually fit on a page. */
+    .role, li { break-inside: avoid; page-break-inside: avoid; }
+
+    /* never strand a heading at the foot of a page */
+    h2, .role-head, .blurb { break-after: avoid; page-break-after: avoid; }
+    header { break-after: avoid; }
+
+    /* no single dangling line at a page boundary */
+    p, li { orphans: 2; widows: 2; }
+  }
+</style>
+</head>
+<body>
+<main>
+
+  <header>
+    <h1>Alexander Odell Tampier</h1>
+    <p class="subtitle">Senior Software Engineer</p>
+    <p class="contact">
+      Málaga, Spain
+      <span class="sep">·</span><a href="mailto:alextrastero@gmail.com">alextrastero@gmail.com</a>
+      <span class="sep">·</span>+34 607 420 224
+      <span class="sep">·</span><a href="https://linkedin.com/in/alexandergarthodell">linkedin.com/in/alexandergarthodell</a>
+      <span class="sep">·</span><a href="https://github.com/alextrastero">github.com/alextrastero</a>
+    </p>
+  </header>
+
+  <section>
+    <h2>Profile</h2>
+    <p>
+      Frontend engineer with more than ten years' experience. I started as a web designer and moved
+      into engineering, and the work I've liked most has stayed close to that line: design systems,
+      component libraries, and taking a design from a mockup to something that works with real data.
+    </p>
+    <p>
+      I've worked in online gaming in the UK, in startups in Berlin, and remotely from Spain for a
+      Swiss company. I'm at Glassnode now, building dashboards over large crypto datasets. I'm from
+      Spain with American and English parents, so I've always worked in mixed international teams.
+    </p>
+  </section>
+
+  <section>
+    <h2>Skills</h2>
+    <p class="skills">
+      TypeScript, modern JavaScript, React, Redux and Redux-Saga, TanStack Query, server-rendered
+      React, design systems and design tokens, Sass/SCSS, CSS animations, HTML5 Canvas, Webpack,
+      Node.js, Strapi, Jest, Cypress, Highcharts and µPlot, MCP servers and agent tooling.
+    </p>
+  </section>
+
+  <section>
+    <h2>Experience</h2>
+
+    <div class="role">
+      <div class="role-head">
+        <p class="role-title">Senior Software Engineer <span class="at">· Glassnode</span></p>
+        <span class="dates">2023 – present</span>
       </div>
-    </section>
-    <script src="./main.js"></script>
-    <script>
-/*
- *  ███████╗ ██████╗ ██╗   ██╗███╗   ██╗██████╗     ██╗████████╗██████╗
- *  ██╔════╝██╔═══██╗██║   ██║████╗  ██║██╔══██╗    ██║╚══██╔══╝╚════██╗
- *  █████╗  ██║   ██║██║   ██║██╔██╗ ██║██║  ██║    ██║   ██║     ▄███╔╝
- *  ██╔══╝  ██║   ██║██║   ██║██║╚██╗██║██║  ██║    ██║   ██║     ▀▀══╝
- *  ██║     ╚██████╔╝╚██████╔╝██║ ╚████║██████╔╝    ██║   ██║     ██╗
- *  ╚═╝      ╚═════╝  ╚═════╝ ╚═╝  ╚═══╝╚═════╝     ╚═╝   ╚═╝     ╚═╝
- *
- * contact: alextrastero at gmail dot com
- */
-    </script>
-  </body>
+      <p class="blurb">
+        On-chain analytics platform that helps crypto investors read market data. I take projects
+        from start to finish, working across the React frontend and the Node.js services behind it.
+      </p>
+      <ul>
+        <li>
+          Took a new metrics page an exec had prototyped and got it into the product. A lot of the
+          data behind his version didn't exist, so I went through it with him section by section and
+          proposed things we could actually build, then put each piece behind a feature flag so we
+          could ship and adjust as we went.
+        </li>
+        <li>
+          Moved around 1,000 charts from Highcharts to µPlot to fix slow rendering on dashboards
+          with several charts at once. I wrote a translation layer that converted the existing
+          configs, so none of the charts were rewritten by hand.
+        </li>
+        <li>
+          Built the AI tooling the data science team used to migrate their own chart configs,
+          instead of everything queuing behind me.
+        </li>
+        <li>
+          Built an AI chatbot that lets users ask about on-chain data in plain language, plus MCP
+          servers and a hosted agent that makes small edits and reviews pull requests.
+        </li>
+        <li>
+          Day to day: server-rendered React, TypeScript, Redux and Redux-Saga, a Node.js and Strapi
+          backend, tested with Jest and Cypress.
+        </li>
+      </ul>
+    </div>
+
+    <div class="role">
+      <div class="role-head">
+        <p class="role-title">Senior Software Engineer <span class="at">· Picstars</span></p>
+        <span class="dates">2019 – 2023</span>
+      </div>
+      <p class="blurb">
+        Zurich-based platform connecting brands with creators for marketing campaigns. Fully remote
+        from Spain. I worked on three of the main tools.
+      </p>
+      <ul>
+        <li>
+          A canvas editor for placing branded stickers and logos onto uploaded photos, covering the
+          image compositing, drag and drop, and positioning.
+        </li>
+        <li>
+          A creators app where creators submit their artwork and brands review and approve it.
+        </li>
+        <li>
+          An admin platform where brands manage campaigns, budgets and creators, including the
+          budget and expense reports.
+        </li>
+      </ul>
+    </div>
+
+    <div class="role">
+      <div class="role-head">
+        <p class="role-title">Senior Frontend Engineer <span class="at">· Babbel</span></p>
+        <span class="dates">2016 – 2019</span>
+      </div>
+      <p class="blurb">One of the largest language learning apps.</p>
+      <ul>
+        <li>
+          Built the design system: the design tokens and a set of reusable React components used
+          across all of Babbel's apps.
+        </li>
+        <li>Worked on moving a legacy Rails monolith over to single page apps.</li>
+      </ul>
+    </div>
+
+    <div class="role">
+      <div class="role-head">
+        <p class="role-title">Frontend Engineer <span class="at">· Wimdu</span></p>
+        <span class="dates">2015 – 2016</span>
+      </div>
+      <p class="blurb">Holiday rental marketplace.</p>
+      <ul>
+        <li>
+          Part of the team moving server-rendered Rails views over to React single page apps. Worked
+          out how to fit React into the Rails asset pipeline and turned it into a pattern the team
+          reused for the ports that followed.
+        </li>
+      </ul>
+    </div>
+
+    <div class="role">
+      <div class="role-head">
+        <p class="role-title">Frontend Engineer <span class="at">· BetVictor</span></p>
+        <span class="dates">2011 – 2015</span>
+      </div>
+      <p class="blurb">Online betting. I joined as a web designer and moved into the frontend team.</p>
+      <ul>
+        <li>
+          Two years building dynamic banners with live odds. Several ran in production for years on
+          high traffic sites including oddschecker.com and livescore.com.
+        </li>
+        <li>
+          Two years in the frontend team building shared components with ERB templating in Rails,
+          Sass/SCSS and CSS animations, and JavaScript with jQuery and AngularJS. Handled the build
+          setup with Grunt and Gulp.
+        </li>
+      </ul>
+    </div>
+
+  </section>
+
+  <section>
+    <h2>Open source</h2>
+    <div class="role">
+      <div class="role-head">
+        <p class="role-title">react-materialize</p>
+        <span class="dates">2015 – present</span>
+      </div>
+      <p class="blurb">
+        A React wrapper for materialize-css. Around 1.4k stars on GitHub and 11k npm downloads a
+        month, often used as a starter kit by people learning React.
+      </p>
+      <ul>
+        <li>
+          Most of the work is reviewing other people's pull requests and deciding what belongs in
+          the library. I help contributors through problems across React, Webpack and Jest, which
+          usually means explaining a tricky idea clearly rather than writing the code myself.
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>Outside work</h2>
+    <p>
+      I grew up in my family's hotel in Jimena de la Frontera, in Andalucía, dealing with guests
+      from all over the world from a young age. That's probably where I got comfortable with people
+      and with different cultures. Otherwise: mountain climbing, via ferratas, walking, and some
+      amateur music production.
+    </p>
+  </section>
+
+</main>
+</body>
 </html>
